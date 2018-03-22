@@ -1,0 +1,114 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="me.peterjiang.testfinal.Fragment5">
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:typeface="serif"
+            android:textColor="#000"
+            android:text="Event"
+            android:id="@+id/eventdetail"
+            android:textAlignment="center"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <SeekBar
+                android:id="@+id/seekBar1"
+                android:max="100"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:layout_marginTop="10dp">
+
+            </SeekBar>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/seekbartext"
+                android:layout_gravity="center_horizontal|center_vertical"
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp">
+
+            <TextView
+                android:text="Upcoming Event: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="16sp"
+                android:typeface="serif"
+                android:textColor="#000"
+                android:id="@+id/coming" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/coming"
+                android:textSize="16sp"
+                android:typeface="serif"
+                android:id="@+id/eventlist"
+                />
+
+            <TextView
+                android:text="Expired Event: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@+id/eventlist"
+                android:textSize="16sp"
+                android:typeface="serif"
+                android:textColor="#000"
+                android:id="@+id/expired" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/expired"
+                android:textSize="16sp"
+                android:typeface="serif"
+                android:id="@+id/eventlist2"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--</ScrollView>-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/eventfab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/colorPrimary"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_add_white_24dp"
+        />
+
+
+</FrameLayout>

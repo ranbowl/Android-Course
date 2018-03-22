@@ -1,0 +1,226 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.peterjiang.testfinal.FragmentEventDetail">
+
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:textSize="24sp"-->
+        <!--android:typeface="serif"-->
+        <!--android:textColor="#000"-->
+        <!--android:text="Event Detail"-->
+        <!--android:textAlignment="center"-->
+        <!--/>-->
+
+        <TextView
+            android:text="EventName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="24sp"
+            android:typeface="serif"
+            android:textColor="#000"
+            android:id="@+id/eventname"
+            android:textAlignment="center"
+            android:background="@color/btn_login_bg"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal">
+
+                <ImageView
+                    android:paddingLeft="15sp"
+                    android:layout_width="30sp"
+                    android:layout_height="25sp"
+                    app:srcCompat="@drawable/icon_clock"
+                    android:id="@+id/imageView" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="EventDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10sp"
+                    android:paddingLeft="10sp"
+                    android:textSize="18sp"
+                    android:typeface="serif"
+                    android:textColor="#000"
+                    android:id="@+id/eventdate" />
+
+
+
+                <TextView
+                    android:text="EventTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10sp"
+                    android:paddingBottom="10sp"
+                    android:textSize="18sp"
+                    android:typeface="serif"
+                    android:textColor="#000"
+                    android:id="@+id/eventtime" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal">
+
+                <ImageView
+                    android:paddingLeft="15sp"
+                    android:layout_width="30sp"
+                    android:layout_height="25sp"
+                    app:srcCompat="@drawable/icon_add"
+                    android:id="@+id/imageView2" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:text="EventPlace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10sp"
+                android:paddingLeft="10sp"
+                android:paddingBottom="10sp"
+                android:textSize="18sp"
+                android:typeface="serif"
+                android:textColor="#000"
+                android:id="@+id/eventplace" />
+
+        </LinearLayout>
+
+        <TextView
+            android:text="Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10sp"
+            android:paddingLeft="10sp"
+            android:paddingBottom="10sp"
+            android:textSize="18sp"
+            android:typeface="serif"
+            android:textColor="#000"
+            android:id="@+id/eventdesc" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/RSVP_not"
+            android:text="RSVP No" />
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_below="@id/event_desc"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:id="@+id/RSVP_attend"
+            android:text="RSVP Attend" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/RSVP_cancel"
+            android:text="RSVP Cancel" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Event_delete"
+            android:text="Delete Event" />
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <TextView
+                android:text="Going: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:typeface="serif"
+                android:textColor="#000"
+                android:id="@+id/going" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/going"
+                android:textSize="14sp"
+                android:typeface="serif"
+                android:divider="@null"
+                android:id="@+id/AttendLV"/>
+
+            <TextView
+                android:layout_below="@+id/AttendLV"
+                android:text="Not Going: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:typeface="serif"
+                android:textColor="#000"
+                android:id="@+id/notgoing" />
+
+            <ListView
+                android:layout_below="@+id/notgoing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:typeface="serif"
+                android:divider="@null"
+                android:id="@+id/NotLV"/>
+
+        <!--</RelativeLayout>-->
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="4dp"-->
+            <!--android:background="@drawable/sendbird_img_shadow"-->
+            <!--/>-->
+
+    </LinearLayout>
+
+    <!--</ScrollView>-->
+
+</FrameLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+
+    <item android:id="@+id/profile"
+        android:title="Profile"
+        app:showAsAction="never"
+        android:orderInCategory="100"/>
+    <item android:id="@+id/openchat"
+        android:title="OpenChat"
+        app:showAsAction="never"
+        android:orderInCategory="100"/>
+    <item android:id="@+id/group"
+        android:title="Group"
+        app:showAsAction="never"
+        android:orderInCategory="100"/>
+    <item android:id="@+id/friend"
+        android:title="Friend"
+        app:showAsAction="never"
+        android:orderInCategory="100"/>
+    <item android:id="@+id/event"
+        android:title="Event"
+        app:showAsAction="never"
+        android:orderInCategory="100"/>
+
+</menu>

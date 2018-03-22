@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="me.peterjiang.testfinal.MainActivity">
+
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:id="@+id/customToolbar"
+        app:theme="@style/AlertDialog.AppCompat.Light"
+        >
+    </android.support.v7.widget.Toolbar>
+
+    <!--<fragment-->
+    <!--android:id="@+id/fragment1"-->
+    <!--android:name="me.peterjiang.assignment3_1.Fragment1"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:layout="@layout/fragment1" />-->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="8dp"
+        android:id="@+id/main_fragment"
+        >
+
+    </LinearLayout>
+
+
+</LinearLayout>
